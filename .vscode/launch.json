@@ -1,0 +1,29 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch Program",
+      "program": "${workspaceFolder}/src/index.ts",
+      "preLaunchTask": "npm: copy",
+      "outFiles": [
+        "${workspaceFolder}/dist/**/*.js"
+      ],
+      "env": { "AWS_XRAY_CONTEXT_MISSING": "LOG_ERROR" }
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Test",
+      "program": "${workspaceFolder}/tests/*.ts",
+      "preLaunchTask": "npm: copy",
+      "outFiles": [
+        "${workspaceFolder}/dist/**/*.js"
+      ]
+    }
+  ]
+}

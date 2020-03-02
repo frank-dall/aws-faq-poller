@@ -1,0 +1,7 @@
+{
+  "region": "us-east-1",
+  "servicesTable": "services",
+  "qaTable": "services-qanda",
+  "accountId": "",
+  "logLevel": "info"
+}

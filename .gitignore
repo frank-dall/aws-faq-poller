@@ -1,0 +1,8 @@
+node_modules
+settings.*
+dist*
+src/*.js
+src/bin/alexa
+*.swp
+*.zip
+.DS_Store

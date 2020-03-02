@@ -1,0 +1,48 @@
+{
+  "name": "aws-faq-poller",
+  "version": "1.0.0",
+  "description": "A poller service for AWS FAQ pages",
+  "main": "index.ts",
+  "scripts": {
+    "test": "ts-node node_modules/tape/bin/tape tests/*.ts",
+    "build": "tsc -p .",
+    "build:live": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts",
+    "watch": "tsc -w",
+    "prestart": "cp ./settings.json ./src",
+    "start": "AWS_XRAY_CONTEXT_MISSING=LOG_ERROR npm run build:live | bunyan",
+    "copy": "cp ./settings.json ./dist/src/settings.json", 
+    "predeploy": "rm -rf dist/src/node_modules ; cp -R node_modules dist/src/node_modules; cp ./settings.json ./dist/src/settings.json; cd dist/src/ && zip -r ../../aws-faq-poller.zip ./; cd ../../../../",
+    "deploy": "cd deploy/ && cdk deploy",
+    "pretest": "tsc -p ."
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frank_dall/aws-faq-poller.git"
+  },
+  "keywords": [
+    "AWS",
+    "FAQ"
+  ],
+  "author": "Frank Dallezotte <f.dallezotte.ms@gmail.com>",
+  "dependencies": {
+    "@types/jsdom": "^12.2.4",
+    "@types/node": "^12.7.1",
+    "@types/node-fetch": "^2.5.0",
+    "ask-sdk-core": "^2.7.0",
+    "ask-sdk-model": "^1.19.0",
+    "aws-sdk": "^2.514.0",
+    "aws-xray-sdk": "^2.3.4",
+    "bunyan": "^1.8.12",
+    "jsdom": "^15.1.1",
+    "node-fetch": "^2.6.0",
+    "ts-node": "^8.3.0",
+    "typescript": "^3.5.3"
+  },
+  "devDependencies": {
+    "@types/bunyan": "^1.8.6",
+    "@types/tape": "^4.2.33",
+    "nodemon": "^1.19.1",
+    "tape": "^4.11.0"
+  }
+}

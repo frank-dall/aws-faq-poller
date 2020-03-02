@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "target":"ES2018",
+    "module": "commonjs",
+    "lib": ["es2016", "es2017.object", "es2017.string"],
+    "typeRoots": ["./typings"],
+    "outDir": "./dist",
+    "declaration": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": false,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noImplicitReturns": true,
+    "esModuleInterop": true,
+    "noFallthroughCasesInSwitch": false,
+    "inlineSourceMap": true,
+    "inlineSources": true,
+    "experimentalDecorators": true,
+    "strictPropertyInitialization":false
+  },
+  "include": [
+      "./src/**/*",
+      "./tests/**/*", "typings/aws-xray-sdk.d.ts", "typings/@config/config.d.ts"
+  ],
+  "exclude": [
+      "node_modules",
+      "**/*.spec.ts"
+  ]
+}
