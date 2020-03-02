@@ -29,8 +29,6 @@
     "@types/jsdom": "^12.2.4",
     "@types/node": "^12.7.1",
     "@types/node-fetch": "^2.5.0",
-    "ask-sdk-core": "^2.7.0",
-    "ask-sdk-model": "^1.19.0",
     "aws-sdk": "^2.514.0",
     "aws-xray-sdk": "^2.3.4",
     "bunyan": "^1.8.12",
