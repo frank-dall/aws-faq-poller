@@ -32,7 +32,7 @@
     "aws-sdk": "^2.514.0",
     "aws-xray-sdk": "^2.3.4",
     "bunyan": "^1.8.12",
-    "jsdom": "^15.1.1",
+    "jsdom": "^16.5.0",
     "node-fetch": "^2.6.1",
     "ts-node": "^8.3.0",
     "typescript": "^3.5.3"
